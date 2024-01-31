@@ -1,0 +1,11 @@
+.containerHome {
+  display: block;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.labelHome {
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(65 123 216);
+}
