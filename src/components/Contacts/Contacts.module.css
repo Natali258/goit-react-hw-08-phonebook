@@ -1,6 +1,7 @@
 .containerList {
   display: block;
-  margin-left: 175px;
+  max-width: 444px;
+  margin: 0 auto;
 }
 .contactsList {
   display: flex;
