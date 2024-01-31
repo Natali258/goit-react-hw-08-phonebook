@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './Filter.module.css';
+import { TextField } from '@mui/material';
+import Container from '@mui/material/Container';
 
 import {
   changeFilter,
@@ -13,9 +15,13 @@ export const Filter = () => {
   };
 
   return (
-    <div className={s.search}>
+    <Container maxWidth="xs">
       <span className={s.label}>Find contacts by name</span>
-      <input
+      <TextField
+        sx={{ backgroundColor: 'rgba(208, 224, 241, 0.822)' }}
+        inputProps={{ inputMode: 'tel', pattern: '[0-9]*' }}
+        margin="normal"
+        fullWidth
         onChange={changeFilterValue}
         type="text"
         name="name"
@@ -23,6 +29,6 @@ export const Filter = () => {
         className={s.input}
         value={filter}
       />
-    </div>
+    </Container>
   );
 };

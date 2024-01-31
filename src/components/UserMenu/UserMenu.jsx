@@ -1,6 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-
-// import { postLogOutThunk } from 'services/fetchAuth';
 import { Button, Toolbar } from '@mui/material';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { selectUser } from '../../redux/authSlice/AuthSlice';

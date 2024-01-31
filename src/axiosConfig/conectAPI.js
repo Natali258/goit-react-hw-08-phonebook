@@ -7,6 +7,6 @@ export const conectAPI = axios.create({
 export const setToken = token => {
   conectAPI.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
-export const clearToken = token => {
+export const clearToken = () => {
   conectAPI.defaults.headers.common.Authorization = '';
 };

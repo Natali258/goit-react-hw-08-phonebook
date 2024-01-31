@@ -26,11 +26,11 @@ export const Contacts = () => {
   };
   const contacts = getFilterValue();
   return (
-    <div>
+    <div className={s.containerList}>
       <ul className={s.contactsList}>
         {contacts.map(contact => (
           <li className={s.contactLi} key={contact.id}>
-            {contact.name}: {contact.phone}
+            {contact.name}: {contact.number}
             <button
               onClick={() => dispatch(deleteContactThunk(contact.id))}
               className={s.btnLi}

@@ -19,7 +19,6 @@ export const Register = () => {
   const { register, reset, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const submit = data => {
-    console.log(data);
     dispatch(registerThunk(data));
     reset();
   };
@@ -96,7 +95,6 @@ export const Register = () => {
             <Grid container justifyContent="flex-end"></Grid>
           </Box>
         </Box>
-        {/* <Copyright sx={{ mt: 5 }} /> */}
       </Container>
     </ThemeProvider>
   );

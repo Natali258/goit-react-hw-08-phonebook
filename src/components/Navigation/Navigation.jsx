@@ -8,7 +8,7 @@ export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <Toolbar /* sx={toolbarStyle} */>
+    <Toolbar>
       <NavLink to="/">Home</NavLink>
       {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
     </Toolbar>

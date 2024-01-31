@@ -17,7 +17,6 @@ export const Login = () => {
   const { register, reset, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const submit = data => {
-    console.log(data);
     dispatch(loginThunk(data));
     reset();
   };
@@ -67,10 +66,7 @@ export const Login = () => {
               id="password"
               autoComplete="current-password"
             />
-            {/* <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            /> */}
+
             <Button
               type="submit"
               fullWidth
@@ -81,7 +77,6 @@ export const Login = () => {
             </Button>
           </Box>
         </Box>
-        {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
     </ThemeProvider>
   );

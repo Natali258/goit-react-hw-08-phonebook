@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// import { Section } from './Section/Section';
-// import { ContactForm } from './ContactForm/ContactForm';
-
-// import { Filter } from 'components/Filter/Filter';
 import { HomePage } from 'pages/HomePage/HomePage';
 import { Register } from 'pages/Register/Register';
 import { Login } from 'pages/Login/Login';
@@ -28,7 +24,7 @@ export const App = () => {
           <Route
             path="/register"
             element={
-              <PublicRoute>
+              <PublicRoute redirectTo="/contacts">
                 <Register />
               </PublicRoute>
             }
@@ -36,7 +32,7 @@ export const App = () => {
           <Route
             path="/login"
             element={
-              <PublicRoute>
+              <PublicRoute redirectTo="/contacts">
                 <Login />
               </PublicRoute>
             }
@@ -44,7 +40,7 @@ export const App = () => {
           <Route
             path="/contacts"
             element={
-              <PrivatRoute>
+              <PrivatRoute redirectTo="/login">
                 <ContactsPage />
               </PrivatRoute>
             }
@@ -54,15 +50,4 @@ export const App = () => {
       ;
     </>
   );
-  // return (
-  //   <div>
-  //     <Section title="Phonebook">
-  //       <ContactForm />
-  //     </Section>
-  //     <Section title="Contacts">
-  //       <Filter />
-  //       <Contacts />
-  //     </Section>
-  //   </div>
-  // );
 };
