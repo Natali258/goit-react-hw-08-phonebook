@@ -1,6 +1,7 @@
 .forma {
   width: 350px;
   height: 100%;
+  margin-top: 80px;
   border: 2px solid rgb(204, 70, 155);
   padding: 25px 20px;
   display: flex;
